@@ -1,0 +1,6 @@
+.color-back{
+  height: 300px;
+  &.is-action{
+    background: var(--action);
+  }
+}
