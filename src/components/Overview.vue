@@ -1,125 +1,172 @@
 <template>
-   <div class="grid-container">
-       <!--<router-link to="/">Home</router-link> |-->
-        <router-link to="/employee">
-            <div class="employee">
-                <EmployeeBackground class="employee-background"></EmployeeBackground>
-                <AvatarBackground class="avatar-background"></AvatarBackground>
-                <SanderAvatar class="avatar"></SanderAvatar>
-                <div class="text-box">
-                    <h4>Erwin Haers</h4>
-                    <h4>UX-designer</h4>
-                </div>
-            </div>
-        </router-link>
-       <router-link to="/employee">
-           <div class="employee">
-               <EmployeeBackground class="employee-background"></EmployeeBackground>
-               <AvatarBackground class="avatar-background"></AvatarBackground>
-               <SanderAvatar class="avatar"></SanderAvatar>
-               <div class="text-box">
-                   <h4>Erwin Haers</h4>
-                   <h4>UX-designer</h4>f
-               </div>
-           </div>
-       </router-link>
-       <router-link to="/employee">
-           <div class="employee">
-               <EmployeeBackground class="employee-background"></EmployeeBackground>
-               <AvatarBackground class="avatar-background"></AvatarBackground>
-               <SanderAvatar class="avatar"></SanderAvatar>
-               <div class="text-box">
-                   <h4>Erwin Haers</h4>
-                   <h4>UX-designer</h4>
-               </div>
-           </div>
-       </router-link>
-       <router-link to="/employee">
-           <div class="employee">
-               <EmployeeBackground class="employee-background"></EmployeeBackground>
-               <AvatarBackground class="avatar-background"></AvatarBackground>
-               <SanderAvatar class="avatar"></SanderAvatar>
-               <div class="text-box">
-                   <h4>Erwin Haers</h4>
-                   <h4>UX-designer</h4>
-               </div>
-           </div>
-       </router-link>
-       <router-link to="/employee">
-           <div class="employee">
-               <EmployeeBackground class="employee-background"></EmployeeBackground>
-               <AvatarBackground class="avatar-background"></AvatarBackground>
-               <SanderAvatar class="avatar"></SanderAvatar>
-               <div class="text-box">
-                   <h4>Erwin Haers</h4>
-                   <h4>UX-designer</h4>
-               </div>
-           </div>
-       </router-link>
-       <router-link to="/employee">
-           <div class="employee">
-               <EmployeeBackground class="employee-background"></EmployeeBackground>
-               <AvatarBackground class="avatar-background"></AvatarBackground>
-               <SanderAvatar class="avatar"></SanderAvatar>
-               <div class="text-box">
-                   <h4>Erwin Haers</h4>
-                   <h4>UX-designer</h4>
-               </div>
-           </div>
-       </router-link>
-   </div>
+  <div class="grid-container">
+    <router-link to="/sander">
+      <employee
+        class="is-action is-small"
+        name="Sander Bruggeman"
+        function-name="UX-designer"
+      >
+        <template slot="SvgAvatar">
+          <svg-sander-avatar class="avatar"></svg-sander-avatar>
+        </template>
+      </employee>
+    </router-link>
+    <router-link to="/sander">
+      <employee
+        class="is-action is-small"
+        name="Sander Bruggeman"
+        function-name="UX-designer"
+      >
+        <template slot="SvgAvatar">
+          <svg-sander-avatar class="avatar"></svg-sander-avatar>
+        </template>
+      </employee>
+    </router-link>
+    <router-link to="/sander">
+      <employee
+        class="is-action is-small"
+        name="Sander Bruggeman"
+        function-name="UX-designer"
+      >
+        <template slot="SvgAvatar">
+          <svg-sander-avatar class="avatar"></svg-sander-avatar>
+        </template>
+      </employee>
+    </router-link>
+    <router-link to="/sander">
+      <employee
+        class="is-action is-small"
+        name="Sander Bruggeman"
+        function-name="UX-designer"
+      >
+        <template slot="SvgAvatar">
+          <svg-sander-avatar class="avatar"></svg-sander-avatar>
+        </template>
+      </employee>
+    </router-link>
+    <router-link to="/nick">
+      <employee
+        class="is-warning is-small"
+        name="Nick Bolink"
+        function-name="Front-end Developer"
+      >
+        <template slot="SvgAvatar">
+          <svg-nick-avatar class="avatar"></svg-nick-avatar>
+        </template>
+      </employee>
+    </router-link>
+
+    <router-link to="/max">
+      <employee
+        class="is-success is-small"
+        name="Max Derneden"
+        function-name="UX-designer"
+      >
+        <template slot="SvgAvatar">
+          <svg-max-avatar class="avatar"></svg-max-avatar>
+        </template>
+      </employee>
+    </router-link>
+
+    <router-link to="/rosanne">
+      <employee
+        class="is-danger is-small"
+        name="Rosanne Geertsen"
+        function-name="UX-designer"
+      >
+        <template slot="SvgAvatar">
+          <svg-rosanne-avatar class="avatar"></svg-rosanne-avatar>
+        </template>
+      </employee>
+    </router-link>
+
+    <router-link to="/zillah">
+      <employee
+        class="is-gray is-small"
+        name="Zillah Calle"
+        function-name="Fullstack-Developer"
+      >
+        <template slot="SvgAvatar">
+          <svg-zillah-avatar class="avatar"></svg-zillah-avatar>
+        </template>
+      </employee>
+    </router-link>
+
+    <router-link to="/timo">
+      <employee
+        class="is-action is-small"
+        name="Timo Wentink"
+        function-name="UX-designer"
+      >
+        <template slot="SvgAvatar">
+          <svg-timo-avatar class="avatar"></svg-timo-avatar>
+        </template>
+      </employee>
+    </router-link>
+  </div>
 </template>
 
 <script>
-    import AvatarBackground from '../assets/img/avatar-back.svg';
-    import SanderAvatar from '../assets/img/sander.svg';
-    import EmployeeBackground from '../assets/img/back.svg';
+import Employee from "../components/Employee.vue";
+import SvgSanderAvatar from "../assets/img/sander.svg";
+import SvgNickAvatar from "../assets/img/nick.svg";
+import SvgMaxAvatar from "../assets/img/max.svg";
+import SvgRosanneAvatar from "../assets/img/rosanne.svg";
+import SvgZillahAvatar from "../assets/img/zillah.svg";
+import SvgTimoAvatar from "../assets/img/timo.svg";
 
-    export default {
-        components: {
-            AvatarBackground,
-            SanderAvatar,
-            EmployeeBackground,
-        }
-
-    };
+export default {
+  components: {
+    Employee,
+    SvgSanderAvatar,
+    SvgNickAvatar,
+    SvgMaxAvatar,
+    SvgRosanneAvatar,
+    SvgZillahAvatar,
+    SvgTimoAvatar
+  }
+};
 </script>
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss" scoped>
-    .grid-container{
-        display: grid;
-        grid-gap: 1em;
-        max-width: 1240px;
-        margin: 80px auto;
-        grid-auto-rows: 400px;
-        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-        a{
-            height: 400px;
-        }
-        .employee{
-            position: relative;
-            svg{
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: 0 auto;
-                &.avatar{
-                    top: 50px;
-                }
-                &.avatar-background{
-                    top: 68px;
-                }
-            }
-            .text-box{
-                text-align: center;
-                position: absolute;
-                top: 250px;
-                left: 0;
-                right: 0;
-            }
-        }
+<style type="text/scss" lang="scss">
+.grid-container {
+  display: grid;
+  grid-gap: 1em;
+  max-width: 1240px;
+  margin: 120px auto;
+  grid-auto-rows: 350px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  a {
+    text-decoration: none;
+  }
+  .employee {
+    display: grid;
+    grid-template-areas: "overlap";
+    text-align: center;
+    svg {
+      &.employee-background {
+        margin-top: -40px;
+        align-self: start;
+      }
     }
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .grid-container {
+    margin: 80px auto 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    .employee {
+      grid-template-rows: auto auto;
+    }
+  }
+}
+@media screen and(max-width: 450px) {
+  .grid-container {
+    margin: 40px auto 0 auto;
+    .employee {
+      grid-template-columns: 100%;
+    }
+  }
+}
 </style>

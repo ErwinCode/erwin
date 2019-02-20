@@ -1,6 +1,67 @@
-.color-back{
-  height: 300px;
-  &.is-action{
-    background: var(--action);
+.employee {
+  &.is-action {
+    svg.employee-background {
+      path {
+        fill: var(--action);
+      }
+    }
+  }
+  &.is-warning {
+    svg.employee-background {
+      path {
+        fill: var(--warning);
+      }
+    }
+  }
+  &.is-success {
+    svg.employee-background {
+      path {
+        fill: var(--success);
+      }
+    }
+  }
+  &.is-danger {
+    svg.employee-background {
+      path {
+        fill: var(--danger);
+      }
+    }
+  }
+  &.is-gray {
+    svg.employee-background {
+      path {
+        fill: var(--gray);
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 450px){
+  .employee {
+    &.is-action {
+      svg.employee-background {
+        background: var(--action);
+      }
+    }
+    &.is-warning {
+      svg.employee-background {
+        background: var(--warning);
+      }
+    }
+    &.is-success {
+      svg.employee-background {
+        background: var(--success);
+      }
+    }
+    &.is-danger {
+      svg.employee-background {
+        background: var(--danger);
+      }
+    }
+    &.is-gray {
+      svg.employee-background {
+        background: var(--gray);
+      }
+    }
   }
 }

@@ -1,10 +1,10 @@
 <template>
- <div>
+  <div>
     <header>
-        <svg-logo></svg-logo>
+      <svg-logo></svg-logo>
     </header>
     <overview></overview>
- </div>
+  </div>
 </template>
 
 <script>
@@ -16,8 +16,7 @@ export default {
   name: "home",
   components: {
     Overview,
-      SvgLogo
+    SvgLogo
   }
 };
 </script>
-

@@ -1,0 +1,41 @@
+.detail-page{
+  .employee{
+    padding-top: 90px;
+    grid-template-columns: minmax(auto, 450px);
+  }
+  a.arrow{
+    padding: 32px;
+    position: absolute;
+  }
+  .color-back {
+    height: 250px;
+    &.is-action {
+      background: var(--action);
+    }
+    &.is-danger {
+      background: var(--danger);
+    }
+    &.is-warning {
+      background: var(--warning);
+    }
+    &.is-success {
+      background: var(--success);
+    }
+    &.is-gray {
+      background: var(--gray);
+    }
+    svg.employee-background{
+      display: none;
+    }
+    .text-box{
+      padding-left: 32px;
+      padding-right: 32px;
+      p{
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 26px;
+        margin-top: 40px;
+      }
+    }
+  }
+}

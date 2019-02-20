@@ -3,3 +3,9 @@
 :root{
   font-family: 'Khula', sans-serif;
 }
+
+@media screen and (max-width: 768px){
+  .is-hidden-mobile {
+    display: none!important;
+  }
+}

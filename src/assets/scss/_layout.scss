@@ -2,3 +2,12 @@ header{
   background: var(--ghost-white);
   padding: $global-padding*4;
 }
+
+@media screen and (max-width: 768px) {
+  header{
+    svg{
+      margin: 0 auto;
+      display: block;
+    }
+  }
+}
