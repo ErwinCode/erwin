@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Overview from "./components/Overview.vue";
 
 Vue.use(Router);
 
@@ -8,44 +8,50 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      name: "overview",
+      component: Overview
     },
     {
       path: "/sander",
       name: "sander",
       component: () =>
-        import("./views/Sander.vue")
+        import("./components/Sander.vue")
     },
     {
       path: "/nick",
       name: "nick",
       component: () =>
-          import("./views/Nick.vue")
+          import("./components/Nick.vue")
     },
     {
       path: "/max",
       name: "max",
       component: () =>
-          import("./views/Max.vue")
+          import("./components/Max.vue")
     },
     {
       path: "/rosanne",
       name: "rosanne",
       component: () =>
-          import("./views/Rosanne.vue")
+          import("./components/Rosanne.vue")
     },
     {
       path: "/zillah",
       name: "zillah",
       component: () =>
-          import("./views/Zillah.vue")
+          import("./components/Zillah.vue")
     },
     {
       path: "/timo",
       name: "timo",
       component: () =>
-          import("./views/Timo.vue")
+          import("./components/Timo.vue")
+    },
+    {
+      path: "/cms",
+      name: "cms",
+      component: () =>
+          import("./components/Cms.vue")
     }
   ]
 });

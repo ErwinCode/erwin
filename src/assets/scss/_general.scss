@@ -3,9 +3,54 @@
 :root{
   font-family: 'Khula', sans-serif;
 }
-
+a{
+  text-decoration: none;
+  color: var(--gray);
+}
+.button{
+  color: white;
+  padding: 16px 50px;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  text-transform: uppercase;
+  &.is-success{
+    background-color: var(--success);
+    border: 2px solid var(--success);
+    &:hover{
+      background-color: var(--success-darker);
+      border: 2px solid var(--success-darker);
+    }
+  }
+  &.is-action{
+    background-color: var(--action);
+    border: 2px solid var(--action);
+    &:hover{
+      background-color: var(--action-darker);
+      border: 2px solid var(--action-darker);
+    }
+  }
+  &.is-ghost-action{
+    background-color: transparent;
+    border: 2px solid var(--action);
+    color: var(--action);
+    &:hover{
+      background-color: var(--action-darker);
+      border: 2px solid var(--action-darker);
+      color: var(--ghost-white);
+    }
+  }
+}
 @media screen and (max-width: 768px){
   .is-hidden-mobile {
+    display: none!important;
+  }
+  .button{
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 769px){
+  .is-hidden-tablet {
     display: none!important;
   }
 }

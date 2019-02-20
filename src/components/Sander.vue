@@ -1,17 +1,15 @@
 <template>
   <div class="detail-page">
     <header class="is-hidden-mobile">
-      <svg-logo></svg-logo>
+      <router-link to="/">
+        <svg-logo></svg-logo>
+      </router-link>
     </header>
     <router-link to="/" class="arrow">
       <SvgArrow></SvgArrow>
     </router-link>
     <div class="color-back is-action">
-      <employee
-        name="Sander Bruggeman"
-        function-name="Front-end Developer"
-        class="is-large"
-      >
+      <employee name="Sander Bruggeman" function-name="Front-end Engineer" class="is-large">
         <template slot="SvgAvatar">
           <svg-sander-avatar class="avatar"></svg-sander-avatar>
         </template>
@@ -30,7 +28,7 @@
 import SvgArrow from "../assets/img/arrow.svg";
 import SvgLogo from "../assets/img/logo.svg";
 import SvgSanderAvatar from "../assets/img/sander.svg";
-import Employee from "../components/Employee";
+import Employee from "./Employee";
 
 export default {
   components: {
@@ -41,3 +39,4 @@ export default {
   }
 };
 </script>
+

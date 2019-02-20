@@ -1,108 +1,83 @@
 <template>
-  <div class="grid-container">
-    <router-link to="/sander">
-      <employee
-        class="is-action is-small"
-        name="Sander Bruggeman"
-        function-name="UX-designer"
-      >
-        <template slot="SvgAvatar">
-          <svg-sander-avatar class="avatar"></svg-sander-avatar>
-        </template>
-      </employee>
-    </router-link>
-    <router-link to="/sander">
-      <employee
-        class="is-action is-small"
-        name="Sander Bruggeman"
-        function-name="UX-designer"
-      >
-        <template slot="SvgAvatar">
-          <svg-sander-avatar class="avatar"></svg-sander-avatar>
-        </template>
-      </employee>
-    </router-link>
-    <router-link to="/sander">
-      <employee
-        class="is-action is-small"
-        name="Sander Bruggeman"
-        function-name="UX-designer"
-      >
-        <template slot="SvgAvatar">
-          <svg-sander-avatar class="avatar"></svg-sander-avatar>
-        </template>
-      </employee>
-    </router-link>
-    <router-link to="/sander">
-      <employee
-        class="is-action is-small"
-        name="Sander Bruggeman"
-        function-name="UX-designer"
-      >
-        <template slot="SvgAvatar">
-          <svg-sander-avatar class="avatar"></svg-sander-avatar>
-        </template>
-      </employee>
-    </router-link>
-    <router-link to="/nick">
-      <employee
-        class="is-warning is-small"
-        name="Nick Bolink"
-        function-name="Front-end Developer"
-      >
-        <template slot="SvgAvatar">
-          <svg-nick-avatar class="avatar"></svg-nick-avatar>
-        </template>
-      </employee>
-    </router-link>
+  <div>
+    <header>
+      <router-link to="/">
+        <svg-logo></svg-logo>
+      </router-link>
+    </header>
+    <div class="grid-container">
+      <router-link to="/sander">
+        <employee
+          class="is-action is-small"
+          name="Sander Bruggeman"
+          function-name="Front-end Engineer"
+        >
+          <template slot="SvgAvatar">
+            <svg-sander-avatar class="avatar"></svg-sander-avatar>
+          </template>
+        </employee>
+      </router-link>
+      <router-link to="/nick">
+        <employee
+          class="is-warning is-small"
+          name="Nick Bolink"
+          function-name="Front-end Developer"
+        >
+          <template slot="SvgAvatar">
+            <svg-nick-avatar class="avatar"></svg-nick-avatar>
+          </template>
+        </employee>
+      </router-link>
 
-    <router-link to="/max">
-      <employee
-        class="is-success is-small"
-        name="Max Derneden"
-        function-name="UX-designer"
-      >
-        <template slot="SvgAvatar">
-          <svg-max-avatar class="avatar"></svg-max-avatar>
-        </template>
-      </employee>
-    </router-link>
+      <router-link to="/max">
+        <employee
+          class="is-success is-small"
+          name="Max Derneden"
+          function-name="Office Manager"
+        >
+          <template slot="SvgAvatar">
+            <svg-max-avatar class="avatar"></svg-max-avatar>
+          </template>
+        </employee>
+      </router-link>
 
-    <router-link to="/rosanne">
-      <employee
-        class="is-danger is-small"
-        name="Rosanne Geertsen"
-        function-name="UX-designer"
-      >
-        <template slot="SvgAvatar">
-          <svg-rosanne-avatar class="avatar"></svg-rosanne-avatar>
-        </template>
-      </employee>
-    </router-link>
+      <router-link to="/rosanne">
+        <employee
+          class="is-danger is-small"
+          name="Rosanne Geertsen"
+          function-name="UX-designer"
+        >
+          <template slot="SvgAvatar">
+            <svg-rosanne-avatar class="avatar"></svg-rosanne-avatar>
+          </template>
+        </employee>
+      </router-link>
 
-    <router-link to="/zillah">
-      <employee
-        class="is-gray is-small"
-        name="Zillah Calle"
-        function-name="Fullstack-Developer"
-      >
-        <template slot="SvgAvatar">
-          <svg-zillah-avatar class="avatar"></svg-zillah-avatar>
-        </template>
-      </employee>
-    </router-link>
+      <router-link to="/zillah">
+        <employee
+          class="is-gray is-small"
+          name="Zillah Calle"
+          function-name="Fullstack-Developer"
+        >
+          <template slot="SvgAvatar">
+            <svg-zillah-avatar class="avatar"></svg-zillah-avatar>
+          </template>
+        </employee>
+      </router-link>
 
-    <router-link to="/timo">
-      <employee
-        class="is-action is-small"
-        name="Timo Wentink"
-        function-name="UX-designer"
-      >
-        <template slot="SvgAvatar">
-          <svg-timo-avatar class="avatar"></svg-timo-avatar>
-        </template>
-      </employee>
-    </router-link>
+      <router-link to="/timo">
+        <employee
+          class="is-action is-small"
+          name="Timo Wentink"
+          function-name="UX-designer"
+        >
+          <template slot="SvgAvatar">
+            <svg-timo-avatar class="avatar"></svg-timo-avatar>
+          </template>
+        </employee>
+      </router-link>
+    </div>
+    <router-link to="/cms">go to cms</router-link>
   </div>
 </template>
 
@@ -114,6 +89,7 @@ import SvgMaxAvatar from "../assets/img/max.svg";
 import SvgRosanneAvatar from "../assets/img/rosanne.svg";
 import SvgZillahAvatar from "../assets/img/zillah.svg";
 import SvgTimoAvatar from "../assets/img/timo.svg";
+import SvgLogo from "../assets/img/logo.svg";
 
 export default {
   components: {
@@ -123,7 +99,8 @@ export default {
     SvgMaxAvatar,
     SvgRosanneAvatar,
     SvgZillahAvatar,
-    SvgTimoAvatar
+    SvgTimoAvatar,
+    SvgLogo
   }
 };
 </script>

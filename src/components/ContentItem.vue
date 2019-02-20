@@ -1,30 +1,32 @@
 <template>
-  <div class="employee">
-    <EmployeeBackground class="employee-background"></EmployeeBackground>
-    <AvatarBackground class="avatar-background"></AvatarBackground>
-    <slot name="SvgAvatar"> </slot>
-    <div class="text-box">
+  <div class="content-item">
+    <router-link to="/">
+      <slot name="SvgAvatar"> </slot>
+    </router-link>
+    <router-link to="/">
       <h4 class="is-bold">{{ name }}</h4>
+      <h4 class="is-hidden-tablet">{{ functionName }}</h4>
+    </router-link>
+    <router-link to="/" class="is-hidden-mobile">
       <h4>{{ functionName }}</h4>
-      <slot name="biography"></slot>
-    </div>
+    </router-link>
+    <router-link to="/cms" class="is-trash"><svg-trash></svg-trash></router-link>
   </div>
 </template>
 
 <script>
-import AvatarBackground from "../assets/img/avatar-back.svg";
-import EmployeeBackground from "../assets/img/back.svg";
+import SvgTrash from "../assets/img/delete.svg";
+
 
 export default {
   components: {
-    AvatarBackground,
-    EmployeeBackground
+    SvgTrash
   },
   props: {
     name: String,
     functionName: String,
     detailLink: String
-  }
+  },
 };
 </script>
 

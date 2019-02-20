@@ -1,21 +1,25 @@
 <template>
   <div class="detail-page">
     <header class="is-hidden-mobile">
-      <svg-logo></svg-logo>
+      <router-link to="/">
+        <svg-logo></svg-logo>
+      </router-link>
     </header>
     <router-link to="/" class="arrow">
       <SvgArrow></SvgArrow>
     </router-link>
     <div class="color-back is-action">
-      <employee name="Sander Bruggeman" function-name="Front-end Developer" class="is-large">
+      <employee
+        name="Timo Wentink"
+        function-name="UX-Designer"
+        class="is-large"
+      >
         <template slot="SvgAvatar">
-          <svg-sander-avatar class="avatar"></svg-sander-avatar>
+          <svg-timo-avatar class="avatar"></svg-timo-avatar>
         </template>
         <template slot="biography">
           <p>
-            Werkt het liefst aan mobiele- en webapplicaties, maar is met vele
-            technieken vertrouwd. Heeft bovendien een voorliefde voor muziek &
-            festivals.
+            Staat aan het hoofd van ons ontwikkelteam en weet alles te fixen. Hij houdt zich voetballend en fietsend fit en dankzij hem schallen klassiekers van Otis Redding en David Bowie nog regelmatig door de speakers.
           </p>
         </template>
       </employee>
@@ -25,16 +29,15 @@
 <script>
 import SvgArrow from "../assets/img/arrow.svg";
 import SvgLogo from "../assets/img/logo.svg";
-import SvgSanderAvatar from "../assets/img/sander.svg";
-import Employee from "../components/Employee";
+import SvgTimoAvatar from "../assets/img/timo.svg";
+import Employee from "./Employee";
 
 export default {
   components: {
     SvgArrow,
     Employee,
     SvgLogo,
-    SvgSanderAvatar
+    SvgTimoAvatar
   }
 };
 </script>
-

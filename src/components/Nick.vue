@@ -1,25 +1,25 @@
 <template>
   <div class="detail-page">
     <header class="is-hidden-mobile">
-      <svg-logo></svg-logo>
+      <router-link to="/">
+        <svg-logo></svg-logo>
+      </router-link>
     </header>
     <router-link to="/" class="arrow">
       <SvgArrow></SvgArrow>
     </router-link>
-    <div class="color-back is-action">
+    <div class="color-back is-warning">
       <employee
-        name="Sander Bruggeman"
+        name="Nick Bolink"
         function-name="Front-end Developer"
         class="is-large"
       >
         <template slot="SvgAvatar">
-          <svg-sander-avatar class="avatar"></svg-sander-avatar>
+          <svg-nick-avatar class="avatar"></svg-nick-avatar>
         </template>
         <template slot="biography">
           <p>
-            Werkt het liefst aan mobiele- en webapplicaties, maar is met vele
-            technieken vertrouwd. Heeft bovendien een voorliefde voor muziek &
-            festivals.
+            Staat aan het hoofd van ons ontwikkelteam en weet alles te fixen. Hij houdt zich voetballend en fietsend fit en dankzij hem schallen klassiekers van Otis Redding en David Bowie nog regelmatig door de speakers.
           </p>
         </template>
       </employee>
@@ -29,15 +29,15 @@
 <script>
 import SvgArrow from "../assets/img/arrow.svg";
 import SvgLogo from "../assets/img/logo.svg";
-import SvgSanderAvatar from "../assets/img/sander.svg";
-import Employee from "../components/Employee";
+import SvgNickAvatar from "../assets/img/nick.svg";
+import Employee from "./Employee";
 
 export default {
   components: {
     SvgArrow,
     Employee,
     SvgLogo,
-    SvgSanderAvatar
+    SvgNickAvatar
   }
 };
 </script>
