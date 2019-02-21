@@ -10,6 +10,7 @@
   },
   "homepage": "https://github.com/ErwinCode/ErwinCode.github.io",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "normalize.css": "^8.0.1",
     "vue": "^2.5.22",
     "vue-router": "^3.0.1"
