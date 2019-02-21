@@ -69,10 +69,10 @@
         <router-link to="/" class="button is-ghost-action">
           Bekijk website
         </router-link>
-        <button class="button is-blank" @click="showModal = !showModal" >
+        <router-link to="/cms" class="button is-blank" @click="showModal = !showModal">
           <svg-trash class="is-hidden-mobile"></svg-trash>
-          <span class="is-hidden-tablet">Verwijder Profiel</span>
-        </button>
+        </router-link>
+
       </div>
     </form>
   </div>
