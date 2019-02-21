@@ -1,0 +1,43 @@
+.employee{
+  display: grid;
+  grid-template-areas: "overlap";
+  text-align: center;
+  grid-template-columns: 350px;
+  justify-content: center;
+  &.is-small{
+    svg.avatar{
+      height: 190px;
+    }
+    svg.avatar-background {
+      height: 170px;
+      margin-top: 20px;
+    }
+  }
+  &.is-large{
+    svg.avatar{
+      height: 265px;
+    }
+    svg.avatar-background {
+      height: 240px;
+    }
+  }
+  svg{
+    grid-area: overlap;
+    align-self: baseline;
+    justify-self: center;
+  }
+  .text-box {
+    margin-top: $global-padding * 3;
+    h4 {
+      font-size: 22px;
+      font-weight: normal;
+      margin: 0;
+      color: var(--black);
+      &.is-bold {
+        font-weight: bold;
+        color: var(--black);
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

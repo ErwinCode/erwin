@@ -1,37 +1,20 @@
 div.cms{
   header{
-    background: var(--action);
-    padding: $global-padding*4;
     display: grid;
+    padding: $global-padding*4;
+    background: var(--action);
     form.search-form{
       margin-left: unset;
       justify-self: center;
     }
   }
-  form.search-form{
-    margin-left: auto;
-    position: relative;
-    align-self: center;
-    input[type="text"]{
-      margin-right: 59px;
-    }
-    button, [type="button"], [type="reset"], [type="submit"]{
-      background: none;
-      border: none;
-      position: absolute;
-      right: 0px;
-      top: -12px;
-      outline: none;
-      cursor: pointer;
-    }
-  }
   .subheader{
-    background: var(--action-light);
-    padding: $global-padding*4 15%;
-    grid-template-columns: auto auto 1fr;
     display: grid;
+    grid-template-columns: auto auto 1fr;
     grid-column-gap: $global-padding;
     grid-row-gap: $global-padding*3;
+    background: var(--action-light);
+    padding: $global-padding*4 15%;
   }
   .cms-content{
     grid-template-columns: 1fr;
@@ -39,24 +22,24 @@ div.cms{
     padding-top: 3%;
     background: var(--white);
     .content-item{
-      padding-right: 15%;
-      padding-left: 15%;
-      background-color: var(--white);
       display: grid;
       grid-template-columns: 50px 250px auto 1fr;
       grid-template-rows: minmax(100px, auto);
+      column-gap: $global-padding*3;
       align-items: center;
-      column-gap: 24px;
+      padding-right: 15%;
+      padding-left: 15%;
+      background-color: var(--white);
       &:hover{
-        background-color: #F4F4F4;
+        background-color: var(--table-darker);
       }
       &:nth-child(odd) {
         background-color: var(--table);
         &:hover{
-          background-color: #F4F4F4;
+          background-color: var(--table-darker);
         }
       }
-      a.is-trash{
+      button.is-trash{
         justify-self: end;
       }
       h4{
@@ -77,8 +60,9 @@ div.cms{
 @media screen and (max-width: 1024px) {
   div.cms{
     .subheader{
-      grid-template-columns: 1fr 1fr;
-      padding: 24px 15%;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      padding: $global-padding*3 15%;
     }
   }
 }
@@ -94,11 +78,10 @@ div.cms{
     .cms-content {
       .content-item{
         grid-template-columns: 1fr 3fr 1fr;
-        column-gap: 12px;
+        column-gap: 0;
         padding-right: 5%;
         padding-left: 5%;
       }
-
     }
   }
 }

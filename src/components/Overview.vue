@@ -77,7 +77,7 @@
         </employee>
       </router-link>
     </div>
-    <router-link to="/cms">go to cms</router-link>
+    <router-link to="/cms" class="button is-action">go to cms</router-link>
   </div>
 </template>
 

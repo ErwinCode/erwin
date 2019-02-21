@@ -1,5 +1,6 @@
 <template>
   <div class="cms">
+
     <header>
       <router-link to="/cms" class="is-hidden-mobile">
         <svg-logo-white></svg-logo-white>
@@ -11,9 +12,10 @@
         </button>
       </form>
     </header>
+
     <div class="cms-container">
       <div class="subheader">
-        <router-link to="/cms" class="button is-success">
+        <router-link to="/cms-detail" class="button is-success">
           + toevoegen
         </router-link>
         <router-link to="/" class="button is-ghost-action">
@@ -26,8 +28,9 @@
           </button>
         </form>
       </div>
+
       <div class="cms-content">
-        <content-item name="Sander Bruggeman" function-name="Front-end Developer" detail-link="edit-sander">
+        <content-item name="Sander Bruggeman" function-name="Front-end Developer">
           <template slot="SvgAvatar">
             <svg-sander-avatar class="avatar"></svg-sander-avatar>
           </template>
@@ -58,7 +61,9 @@
           </template>
         </content-item>
       </div>
+
     </div>
+
   </div>
 </template>
 
@@ -88,4 +93,3 @@ export default {
 };
 </script>
 
-<style type="text/scss" lang="scss"></style>

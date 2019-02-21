@@ -52,6 +52,12 @@ export default new Router({
       name: "cms",
       component: () =>
           import("./components/Cms.vue")
+    },
+    {
+      path: "/cms-detail",
+      name: "cms-detail",
+      component: () =>
+          import("./components/CmsDetail.vue")
     }
   ]
 });

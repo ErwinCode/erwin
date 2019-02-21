@@ -1,11 +1,26 @@
 //TYPO
-
-:root{
+*{
   font-family: 'Khula', sans-serif;
 }
 a{
   text-decoration: none;
   color: var(--gray);
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//BUTTONS
+button{
+  cursor: pointer;
+}
+button.button.is-icon-button{
+  background: transparent;
+  border: none;
 }
 .button{
   color: white;
@@ -14,6 +29,8 @@ a{
   outline: none;
   text-align: center;
   text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
   &.is-success{
     background-color: var(--success);
     border: 2px solid var(--success);
@@ -39,6 +56,36 @@ a{
       border: 2px solid var(--action-darker);
       color: var(--ghost-white);
     }
+  }
+  &.is-icon-button{
+    background-color: var(--white);
+    border: 2px solid var(--gray-light);
+    padding: 16px;
+    color: var(--gray);
+    &:hover{
+      border: 2px solid var(--gray);
+    }
+    span{
+      color: var(--gray);
+    }
+  }
+  &.is-blank{
+    background-color: transparent;
+    border: none;
+    padding: 16px;
+    color: var(--gray);
+    &:hover{
+      border: none;
+    }
+    span{
+      color: var(--gray);
+    }
+  }
+}
+
+svg.is-black{
+  path{
+    fill: var(--gray);
   }
 }
 @media screen and (max-width: 768px){

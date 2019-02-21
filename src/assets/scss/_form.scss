@@ -1,10 +1,29 @@
-input[type="text"]{
+//LABELS
+label.label{
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  &.is-warning{
+    color: var(--warning);
+  }
+}
+
+//FORM FIELD ALIGNING
+.field:not(:last-child) {
+  margin-bottom: .75rem;
+}
+
+//TYPE TEXT
+input[type="text"],input[type="date"],textarea{
   background: var(--ghost-white);
   border: 1px solid transparent;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   padding: 12px 21px;
   color: var(--gray);
   outline: none;
+  line-height: 28px;
   &:focus{
     box-shadow: none;
     outline: none;
@@ -12,5 +31,56 @@ input[type="text"]{
   }
   &:hover{
     border: 1px solid var(--gray);
+  }
+}
+
+//TYPE DATE
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: var(--action-darker);
+  background: transparent;
+}
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+//TYPE FILE
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  padding: 6px 12px;
+  cursor: pointer;
+  text-align: center;
+  color: var(--action);
+  background: var(--white);
+  text-transform: uppercase;
+  border: 2px solid var(--action);
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-left: 24px;
+}
+
+//SEARCH FORM CMS
+form.search-form{
+  margin-left: auto;
+  position: relative;
+  align-self: center;
+  input[type="text"]{
+    margin-right: 59px;
+  }
+  button, [type="button"], [type="reset"], [type="submit"]{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    outline: none;
+    cursor: pointer;
   }
 }

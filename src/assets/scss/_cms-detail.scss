@@ -1,0 +1,118 @@
+div.cms-detail {
+  header {
+    background-color: var(--action);
+  }
+  .subheader {
+    height: 100px;
+    position: relative;
+    padding: $global-padding*4 15%;
+    background: var(--action-light);
+    a.arrow {
+      position: absolute;
+      padding: $global-padding*4;
+      left: 0;
+      top: 0;
+    }
+    .text-header {
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 5%;
+      padding-right: 5%;
+      h1 {
+        text-align: center;
+        margin: 0;
+      }
+    }
+  }
+  .grid-form {
+    display: grid;
+    grid-template-areas:
+            "text-inputs text-inputs avatar avatar"
+            "biography biography biography biography"
+            "buttons buttons buttons buttons";
+    grid-column-gap: $global-padding*4;
+    grid-row-gap: $global-padding*3;
+    padding: 5%;
+    max-width: 900px;
+    margin: 0 auto;
+    input {
+      width: 100%;
+    }
+  }
+  .text-inputs {
+    grid-area: text-inputs;
+  }
+  .avatar {
+    grid-area: avatar;
+    background: var(--action-light);
+    padding: $global-padding*4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    svg.avatar {
+      width: 100px;
+      background: white;
+      padding: 20px;
+      border: 2px dashed var(--action);
+      justify-self: flex-start;
+    }
+  }
+  .biography {
+    grid-area: biography;
+    textarea {
+      width: 100%;
+      resize: vertical;
+    }
+  }
+  .buttons {
+    grid-area: buttons;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .button {
+      &:first-child {
+        margin-left: 0;
+      }
+      margin-left: 12px;
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  div.cms-detail {
+    .subheader {
+      height: auto;
+      min-height: 60px;
+      padding-bottom: 0;
+      background-color: var(--action-light);
+    }
+    .grid-form {
+      grid-template-areas:
+              "avatar avatar avatar avatar"
+              "text-inputs text-inputs text-inputs text-inputs"
+              "biography biography biography biography"
+              "buttons buttons buttons buttons";
+      grid-row-gap: 16px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      .text-inputs,
+      .biography,
+      .buttons {
+        padding-left: $global-padding*3;
+        padding-right: $global-padding*3;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        .button {
+          width: 100%;
+          margin-left: 0;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
