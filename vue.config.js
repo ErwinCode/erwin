@@ -6,5 +6,7 @@ module.exports = {
 
     svgRule.use("vue-svg-loader").loader("vue-svg-loader");
   },
-  publicPath: ""
+  publicPath: process.env.NODE_ENV === 'production'
+      ? '/erwin/'
+      : '/'
 };
