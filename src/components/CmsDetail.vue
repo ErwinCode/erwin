@@ -9,14 +9,10 @@
             <p>Front-end Developer</p>
           </div>
         </div>
-        <router-link to="/cms" class="button is-success" @click="showModal = !showModal">
+        <button class="button is-success" @click="showModal = !showModal">
           Verwijder
-        </router-link>
-        <button
-          class="button is-ghost-action"
-          value="Toggle"
-          @click="showModal = !showModal"
-        >
+        </button>
+        <button class="button is-ghost-action" @click="showModal = !showModal">
           Annuleer
         </button>
       </div>
@@ -69,9 +65,10 @@
         <router-link to="/" class="button is-ghost-action">
           Bekijk website
         </router-link>
-        <router-link to="/cms" class="button is-blank" @click="showModal = !showModal">
+        <button  class="button is-blank" @click="showModal = !showModal">
           <svg-trash class="is-hidden-mobile"></svg-trash>
-        </router-link>
+          <span class="is-hidden-tablet">Verwijderen</span>
+        </button>
 
       </div>
     </form>
